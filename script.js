@@ -1,4 +1,4 @@
-//// ===== HAMBURGER MENU TOGGLE =====
+// ===== HAMBURGER MENU TOGGLE =====
 const hamburger = document.getElementById('hamburger');
 const navLinks = document.querySelector('.nav-links');
 
@@ -15,47 +15,52 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// ===== CONTACT FORM HANDLING =====
+// ===== CONTACT FORM HANDLING (UPDATED FOR FORMSPREE) =====
 const form = document.getElementById('contact-form');
 const formStatus = document.getElementById('form-status');
 
 form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
+    const formData = new FormData(form);
     const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
 
-    // Basic validation
-    if (!name || !email || !message) {
-        formStatus.textContent = '⚠️ Please fill in all fields.';
+    // Basic validation (optional, as Formspree also validates)
+    if (!name) {
+        formStatus.textContent = '⚠️ Please enter your name.';
         formStatus.style.color = '#FF6B6B';
         return;
     }
 
-    if (!email.includes('@') || !email.includes('.')) {
-        formStatus.textContent = '⚠️ Please enter a valid email address.';
-        formStatus.style.color = '#FF6B6B';
-        return;
-    }
-
-    // Simulate sending (since GitHub Pages has no backend)
-    formStatus.textContent = '⏳ Sending...';
+    // Show sending status
+    formStatus.textContent = '⏳ Sending your message...';
     formStatus.style.color = '#4A90D9';
 
-    // Simulate a delay (replace this with actual API call later)
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    try {
+        const response = await fetch('https://formspree.io/f/xjgqvkqo', {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
 
-    // Success message
-    formStatus.textContent = '✅ Thanks ' + name + '! Your message was sent. (Demo)';
-    formStatus.style.color = '#50C878';
-
-    // Reset form
-    form.reset();
+        if (response.ok) {
+            formStatus.textContent = '✅ Thanks ' + name + '! Your message was sent successfully. I\'ll get back to you soon.';
+            formStatus.style.color = '#50C878';
+            form.reset();
+        } else {
+            const errorData = await response.json();
+            formStatus.textContent = '❌ Oops! Something went wrong. Please try again later.';
+            formStatus.style.color = '#FF6B6B';
+            console.error('Formspree error:', errorData);
+        }
+    } catch (error) {
+        formStatus.textContent = '❌ Network error. Please check your connection and try again.';
+        formStatus.style.color = '#FF6B6B';
+        console.error('Fetch error:', error);
+    }
 });
-
-// ===== SMOOTH SCROLL FOR NAV LINKS (built into CSS with scroll-behavior) =====
-// Nothing else needed — CSS `scroll-behavior: smooth;` handles it.
 
 // ===== DYNAMIC YEAR IN FOOTER =====
 document.addEventListener('DOMContentLoaded', () => {
@@ -67,9 +72,3 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 console.log('🚀 Website loaded successfully!');
-//  script.js
-//  D_Site
-//
-//  Created by Dingku Oinam on 22/06/26.
-//
-

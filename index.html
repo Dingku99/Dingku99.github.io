@@ -27,13 +27,18 @@
                 </span>
             </a>
             <ul class="nav-links">
-                <li><a href="#about"><strong>About</strong></a></li>
-                <li><a href="#education"><strong>Education</strong></a></li>
-                <li><a href="#experience"><strong>Experience</strong></a></li>
-                <li><a href="#projects"><strong>Projects</strong></a></li>
-                <li><a href="#thesis"><strong>Thesis</strong></a></li>
-                <li><a href="#contact"><strong>Contact</strong></a></li>
+                <li><a href="#about" data-i18n="nav.about">About</a></li>
+                <li><a href="#education" data-i18n="nav.education">Education</a></li>
+                <li><a href="#experience" data-i18n="nav.experience">Experience</a></li>
+                <li><a href="#projects" data-i18n="nav.projects">Projects</a></li>
+                <li><a href="#thesis" data-i18n="nav.thesis">Thesis</a></li>
+                <li><a href="#contact" data-i18n="nav.contact">Contact</a></li>
             </ul>
+            <div class="language-switcher">
+                <button class="lang-btn active" data-lang="en" aria-label="English">EN</button>
+                <span class="lang-divider">|</span>
+                <button class="lang-btn" data-lang="hi" aria-label="Hindi">हिंदी</button>
+            </div>
             <button class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span><span></span><span></span>
             </button>
@@ -43,17 +48,18 @@
     <!-- ===== HERO / HEADER ===== -->
     <header>
         <div class="container header-content">
+            <!-- Profile Photo - Centered -->
             <div class="hero-profile">
                 <img src="Ding.jpg" alt="Dingku Singh Oinam" class="profile-photo" />
             </div>
-            <h1>Hi, I'm <span class="highlight">Dingku Singh Oinam</span></h1>
-            <p>Research Scholar in NLP | Project Associate | M.Tech CSE </p>
-            <p style="font-size: 1rem; color: #6B6B8A; margin-top: 8px;">
+            <h1><span data-i18n="hero.greeting">Hi, I'm</span> <span class="highlight">Dingku Singh Oinam</span></h1>
+            <p data-i18n="hero.title">Research Scholar in NLP | Project Associate | M.Tech CSE</p>
+            <p style="font-size: 1rem; color: #6B6B8A; margin-top: 8px;" data-i18n="hero.phd">
                 🔬 Currently pursuing Ph.D in Natural Language Processing
             </p>
             <div style="margin-top: 24px;">
-                <a href="#thesis" class="btn btn-primary">📄 View My Thesis</a>
-                <a href="#contact" class="btn btn-secondary" style="margin-left: 12px;">Get in Touch</a>
+                <a href="#thesis" class="btn btn-primary" data-i18n="hero.thesisBtn">📄 View My Thesis</a>
+                <a href="#contact" class="btn btn-secondary" style="margin-left: 12px;" data-i18n="hero.contactBtn">Get in Touch</a>
             </div>
         </div>
     </header>
@@ -61,29 +67,29 @@
     <!-- ===== ABOUT SECTION ===== -->
     <section id="about">
         <div class="container">
-            <h2>About Me</h2>
+            <h2 data-i18n="about.title">About Me</h2>
             <div class="about-grid">
                 <div class="about-text">
-                    <p>
+                    <p data-i18n="about.p1">
                         <strong>I'm a research scholar with a deep passion for Natural Language Processing (NLP),
                         Medical Image Enhancement, and Wireless Sensor Networks.</strong>
                     </p>
-                    <p>
+                    <p data-i18n="about.p2">
                         My journey began with a <strong>B.E. in Computer Science & Engineering (2020)</strong>,
                         where I worked on <strong>Energy Efficiency in Multipath Routing Protocols for Wireless Sensor Networks</strong>.
                         I then completed my <strong>M.Tech in CSE (2022)</strong> with a thesis on
                         <strong>Medical Image Enhancement based on Denoising</strong>.
                     </p>
-                    <p>
+                    <p data-i18n="about.p3">
                         I've gained practical experience through a <strong>Work Based Learning Internship at NIELIT Imphal</strong>
                         and as a <strong>Project Associate at MTU Manipur</strong> on a DST-funded project
                         "Smart Health Solutions for Cattles."
                     </p>
-                    <p>
+                    <p data-i18n="about.p4">
                         Currently, I'm pursuing my <strong>Ph.D in NLP</strong>, exploring the intersection
                         of language, technology, and real-world applications.
                     </p>
-                    <p>
+                    <p data-i18n="about.p5">
                         🔬 <strong>Research Interests:</strong> Natural Language Processing, Medical Imaging,
                         Wireless Sensor Networks, Machine Learning, and AI for Social Good.
                     </p>
@@ -105,18 +111,18 @@
     <!-- ===== EDUCATION SECTION ===== -->
     <section id="education" style="background: white;">
         <div class="container">
-            <h2>🎓 Education</h2>
+            <h2 data-i18n="education.title">🎓 Education</h2>
             <div class="timeline">
 
                 <div class="timeline-item">
                     <div class="timeline-icon">📘</div>
                     <div class="timeline-content">
-                        <h3>Ph.D in Natural Language Processing</h3>
-                        <p class="timeline-date">2025 – Present</p>
-                        <p>Currently pursuing doctoral research in NLP.</p>
+                        <h3 data-i18n="education.phd.title">Ph.D in Natural Language Processing</h3>
+                        <p class="timeline-date" data-i18n="education.phd.date">2024 – Present</p>
+                        <p data-i18n="education.phd.desc">Currently pursuing doctoral research in NLP.</p>
                         <p style="margin-top: 8px;">
                             <a href="https://scholar.google.com/citations?user=8PlPvkoAAAAJ&hl=en" target="_blank" class="btn btn-primary" style="font-size: 0.8rem; padding: 4px 14px;">
-                                🎓 Google Scholar Profile
+                                🎓 <span data-i18n="education.phd.scholar">Google Scholar Profile</span>
                             </a>
                         </p>
                     </div>
@@ -125,12 +131,12 @@
                 <div class="timeline-item">
                     <div class="timeline-icon">🎓</div>
                     <div class="timeline-content">
-                        <h3>M.Tech in Computer Science & Engineering</h3>
-                        <p class="timeline-date">2020 – 2022</p>
+                        <h3 data-i18n="education.mtech.title">M.Tech in Computer Science & Engineering</h3>
+                        <p class="timeline-date" data-i18n="education.mtech.date">2020 – 2022</p>
                         <p>
-                            <strong>Thesis:</strong> "Medical Image Enhancement based on Denoising"<br />
-                            Supervisor: Dr. Th. Ibungomacha Singh, Associate Professor, MIT<br />
-                            Focused on improving medical image quality using Wiener filtering and sharpening techniques.
+                            <strong data-i18n="education.mtech.thesisLabel">Thesis:</strong> <span data-i18n="education.mtech.thesis">"Medical Image Enhancement based on Denoising"</span><br />
+                            <span data-i18n="education.mtech.supervisorLabel">Supervisor:</span> <span data-i18n="education.mtech.supervisor">Dr. Th. Ibungomacha Singh, Associate Professor, MIT</span><br />
+                            <span data-i18n="education.mtech.desc">Focused on improving medical image quality using Wiener filtering and sharpening techniques.</span>
                         </p>
                     </div>
                 </div>
@@ -138,13 +144,12 @@
                 <div class="timeline-item">
                     <div class="timeline-icon">💻</div>
                     <div class="timeline-content">
-                        <h3>B.E. in Computer Science & Engineering</h3>
-                        <p class="timeline-date">2016 – 2020</p>
+                        <h3 data-i18n="education.be.title">B.E. in Computer Science & Engineering</h3>
+                        <p class="timeline-date" data-i18n="education.be.date">2016 – 2020</p>
                         <p>
-                            <strong>Project:</strong> "Energy Efficiency in Multipath Routing Protocol on
-                            Wireless Sensor Network with Static Sink (HSMRP)"<br />
-                            Supervisor: Takhellambam Sonamani Singh, Assistant Professor, MIT<br />
-                            Developed a hop count-based shortest path multipath routing protocol for WSNs.
+                            <strong data-i18n="education.be.projectLabel">Project:</strong> <span data-i18n="education.be.project">"Energy Efficiency in Multipath Routing Protocol on Wireless Sensor Network with Static Sink (HSMRP)"</span><br />
+                            <span data-i18n="education.be.supervisorLabel">Supervisor:</span> <span data-i18n="education.be.supervisor">Takhellambam Sonamani Singh, Assistant Professor, MIT</span><br />
+                            <span data-i18n="education.be.desc">Developed a hop count-based shortest path multipath routing protocol for WSNs.</span>
                         </p>
                     </div>
                 </div>
@@ -152,18 +157,18 @@
                 <div class="timeline-item">
                     <div class="timeline-icon">📖</div>
                     <div class="timeline-content">
-                        <h3>Higher Secondary (Class XII)</h3>
-                        <p class="timeline-date">2016</p>
-                        <p>Comet School, Changangei Ucheckon, Manipur</p>
+                        <h3 data-i18n="education.hs.title">Higher Secondary (Class XII)</h3>
+                        <p class="timeline-date" data-i18n="education.hs.date">2016</p>
+                        <p data-i18n="education.hs.school">Comet School, Changangei Ucheckon, Manipur</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-icon">🏫</div>
                     <div class="timeline-content">
-                        <h3>High School (Class X)</h3>
-                        <p class="timeline-date">2014</p>
-                        <p>Don Bosco School, Chingmeirong, Manipur</p>
+                        <h3 data-i18n="education.high.title">High School (Class X)</h3>
+                        <p class="timeline-date" data-i18n="education.high.date">2014</p>
+                        <p data-i18n="education.high.school">Don Bosco School, Chingmeirong, Manipur</p>
                     </div>
                 </div>
 
@@ -174,30 +179,29 @@
     <!-- ===== EXPERIENCE SECTION ===== -->
     <section id="experience">
         <div class="container">
-            <h2>💼 Professional Experience</h2>
+            <h2 data-i18n="experience.title">💼 Professional Experience</h2>
             <div class="experience-grid">
 
                 <div class="experience-card">
                     <div class="experience-header">
                         <span class="exp-icon">🔬</span>
                         <div>
-                            <h3>Project Associate</h3>
-                            <p class="exp-org">MTU Manipur</p>
+                            <h3 data-i18n="experience.associate.title">Project Associate</h3>
+                            <p class="exp-org" data-i18n="experience.associate.org">MTU Manipur</p>
                         </div>
                     </div>
-                    <p class="exp-date">September 2024 – January 2025</p>
+                    <p class="exp-date" data-i18n="experience.associate.date">September 2024 – January 2025</p>
                     <p>
-                        <strong>Project:</strong> "Smart Health Solutions for Cattles"<br />
-                        <em>Sponsored by:</em> Department of Science and Technology (DST) &
-                        IIT Bhilai Innovation and Technology Foundation.
+                        <strong data-i18n="experience.associate.projectLabel">Project:</strong> <span data-i18n="experience.associate.project">"Smart Health Solutions for Cattles"</span><br />
+                        <em data-i18n="experience.associate.sponsorLabel">Sponsored by:</em> <span data-i18n="experience.associate.sponsor">Department of Science and Technology (DST) & IIT Bhilai Innovation and Technology Foundation.</span>
                     </p>
-                    <p>
+                    <p data-i18n="experience.associate.desc">
                         Developed IoT-based health monitoring solutions for livestock, integrating
                         sensor networks and data analytics for early disease detection.
                     </p>
                     <p style="margin-top: 12px;">
                         <a href="paperSmartHealthSolutions.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.8rem; padding: 4px 14px;">
-                            📄 Download Paper (PDF)
+                            📄 <span data-i18n="experience.associate.downloadBtn">Download Paper (PDF)</span>
                         </a>
                     </p>
                 </div>
@@ -206,16 +210,16 @@
                     <div class="experience-header">
                         <span class="exp-icon">🏛️</span>
                         <div>
-                            <h3>Intern (Work Based Learning Programme)</h3>
-                            <p class="exp-org">NIELIT Imphal</p>
+                            <h3 data-i18n="experience.intern.title">Intern (Work Based Learning Programme)</h3>
+                            <p class="exp-org" data-i18n="experience.intern.org">NIELIT Imphal</p>
                         </div>
                     </div>
-                    <p class="exp-date">September 2023 – February 2024</p>
+                    <p class="exp-date" data-i18n="experience.intern.date">September 2023 – February 2024</p>
                     <p>
-                        <strong>Program:</strong> Work Based Learning Programme<br />
-                        <em>Target Group:</em> SC, ST, EWS, and Women candidates
+                        <strong data-i18n="experience.intern.programLabel">Program:</strong> <span data-i18n="experience.intern.program">Work Based Learning Programme</span><br />
+                        <em data-i18n="experience.intern.targetLabel">Target Group:</em> <span data-i18n="experience.intern.target">SC, ST, EWS, and Women candidates</span>
                     </p>
-                    <p>
+                    <p data-i18n="experience.intern.desc">
                         Acquired hands-on technical skills in emerging technologies to up-skill
                         professional career as per industrial requirements.
                     </p>
@@ -228,7 +232,7 @@
     <!-- ===== PROJECTS SECTION ===== -->
     <section id="projects" style="background: white;">
         <div class="container">
-            <h2>📂 Key Research Projects</h2>
+            <h2 data-i18n="projects.title">📂 Key Research Projects</h2>
             <div class="projects-grid">
 
                 <!-- Project Card 1 -->
@@ -236,16 +240,15 @@
                     <div class="project-image" style="background: linear-gradient(135deg, #4A90D9, #357ABD);">
                         <span>🧠</span>
                     </div>
-                    <h3>Medical Image Enhancement</h3>
+                    <h3 data-i18n="projects.medical.title">Medical Image Enhancement</h3>
                     <p>
-                        <strong>M.Tech Thesis</strong><br />
-                        Enhanced medical images using Gaussian noise addition, Wiener filtering for
-                        denoising, and sharpening techniques. Evaluated using MSE, PSNR, and SNR metrics.
+                        <strong data-i18n="projects.medical.label">M.Tech Thesis</strong><br />
+                        <span data-i18n="projects.medical.desc">Enhanced medical images using Gaussian noise addition, Wiener filtering for denoising, and sharpening techniques. Evaluated using MSE, PSNR, and SNR metrics.</span>
                     </p>
                     <span class="project-tag">MATLAB</span>
                     <span class="project-tag">Wiener Filter</span>
                     <span class="project-tag">Medical Imaging</span>
-                    <a href="#thesis" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;">📄 View Thesis</a>
+                    <a href="#thesis" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;" data-i18n="projects.viewThesis">📄 View Thesis</a>
                 </div>
 
                 <!-- Project Card 2 -->
@@ -253,17 +256,15 @@
                     <div class="project-image" style="background: linear-gradient(135deg, #50C878, #3DAF5E);">
                         <span>📡</span>
                     </div>
-                    <h3>HSMRP: WSN Routing Protocol</h3>
+                    <h3 data-i18n="projects.wsn.title">HSMRP: WSN Routing Protocol</h3>
                     <p>
-                        <strong>B.E. Project</strong><br />
-                        Proposed a Hop count-based Shortest Multipath Routing Protocol (HSMRP) for
-                        Wireless Sensor Networks with static sink. Improved residual energy, live nodes,
-                        and packet delivery ratio.
+                        <strong data-i18n="projects.wsn.label">B.E. Project</strong><br />
+                        <span data-i18n="projects.wsn.desc">Proposed a Hop count-based Shortest Multipath Routing Protocol (HSMRP) for Wireless Sensor Networks with static sink. Improved residual energy, live nodes, and packet delivery ratio.</span>
                     </p>
                     <span class="project-tag">Python</span>
                     <span class="project-tag">WSN</span>
                     <span class="project-tag">Multipath Routing</span>
-                    <a href="#thesis" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;">📄 View Thesis</a>
+                    <a href="#thesis" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;" data-i18n="projects.viewThesis">📄 View Thesis</a>
                 </div>
 
                 <!-- Project Card 3 -->
@@ -271,16 +272,15 @@
                     <div class="project-image" style="background: linear-gradient(135deg, #FF6B6B, #E55050);">
                         <span>🐄</span>
                     </div>
-                    <h3>Smart Health Solutions for Cattles</h3>
+                    <h3 data-i18n="projects.smart.title">Smart Health Solutions for Cattles</h3>
                     <p>
-                        <strong>DST & IIT Bhilai Funded</strong><br />
-                        Designed IoT-based health monitoring system for livestock, enabling early
-                        detection of diseases and improving cattle management practices.
+                        <strong data-i18n="projects.smart.label">DST & IIT Bhilai Funded</strong><br />
+                        <span data-i18n="projects.smart.desc">Designed IoT-based health monitoring system for livestock, enabling early detection of diseases and improving cattle management practices.</span>
                     </p>
                     <span class="project-tag">IoT</span>
                     <span class="project-tag">Data Analytics</span>
                     <span class="project-tag">Sensors</span>
-                    <a href="paperSmartHealthSolutions.pdf" target="_blank" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;">📄 Download Paper</a>
+                    <a href="paperSmartHealthSolutions.pdf" target="_blank" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;" data-i18n="projects.downloadPaper">📄 Download Paper</a>
                 </div>
 
                 <!-- Project Card 4 -->
@@ -288,16 +288,15 @@
                     <div class="project-image" style="background: linear-gradient(135deg, #9B59B6, #7D3C98);">
                         <span>📝</span>
                     </div>
-                    <h3>NLP Research</h3>
+                    <h3 data-i18n="projects.nlp.title">NLP Research</h3>
                     <p>
-                        <strong>Ph.D Research</strong><br />
-                        Currently exploring natural language processing techniques for analyzing
-                        and understanding complex linguistic patterns in regional languages.
+                        <strong data-i18n="projects.nlp.label">Ph.D Research</strong><br />
+                        <span data-i18n="projects.nlp.desc">Currently exploring natural language processing techniques for analyzing and understanding complex linguistic patterns in regional languages.</span>
                     </p>
                     <span class="project-tag">NLP</span>
                     <span class="project-tag">Machine Learning</span>
                     <span class="project-tag">Python</span>
-                    <a href="https://scholar.google.com/citations?user=8PlPvkoAAAAJ&hl=en" target="_blank" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;">🎓 Google Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=8PlPvkoAAAAJ&hl=en" target="_blank" class="btn btn-secondary" style="margin-top: 12px; font-size: 0.85rem; padding: 6px 16px;" data-i18n="projects.googleScholar">🎓 Google Scholar</a>
                 </div>
 
             </div>
@@ -307,8 +306,8 @@
     <!-- ===== THESIS SECTION ===== -->
     <section id="thesis">
         <div class="container">
-            <h2>📄 Thesis & Publications</h2>
-            <p class="contact-subtitle">My research work in Wireless Sensor Networks and Medical Image Processing</p>
+            <h2 data-i18n="thesis.title">📄 Thesis & Publications</h2>
+            <p class="contact-subtitle" data-i18n="thesis.subtitle">My research work in Wireless Sensor Networks and Medical Image Processing</p>
 
             <div class="thesis-grid">
 
@@ -316,19 +315,16 @@
                 <div class="thesis-card">
                     <div class="thesis-icon">🎓</div>
                     <div class="thesis-info">
-                        <h3>M.Tech Thesis (2022)</h3>
-                        <p class="thesis-title">"Medical Image Enhancement based on Denoising"</p>
+                        <h3 data-i18n="thesis.mtech.label">M.Tech Thesis (2022)</h3>
+                        <p class="thesis-title" data-i18n="thesis.mtech.title">"Medical Image Enhancement based on Denoising"</p>
                         <p class="thesis-meta">
-                            <strong>Supervisor:</strong> Dr. Th. Ibungomacha Singh, Associate Professor, MIT<br />
-                            <strong>Institution:</strong> Manipur Institute of Technology, Manipur University
+                            <strong data-i18n="thesis.mtech.supervisorLabel">Supervisor:</strong> <span data-i18n="thesis.mtech.supervisor">Dr. Th. Ibungomacha Singh, Associate Professor, MIT</span><br />
+                            <strong data-i18n="thesis.mtech.institutionLabel">Institution:</strong> <span data-i18n="thesis.mtech.institution">Manipur Institute of Technology, Manipur University</span>
                         </p>
                         <p class="thesis-abstract">
-                            <strong>Abstract:</strong> Medical images often suffer from low contrast and noise.
-                            This thesis proposes a denoising-based enhancement approach using Gaussian noise addition,
-                            Wiener filtering for noise removal, and sharpening techniques. The enhanced images showed
-                            significant improvement in quality as measured by MSE, PSNR, and SNR metrics.
+                            <strong data-i18n="thesis.mtech.abstractLabel">Abstract:</strong> <span data-i18n="thesis.mtech.abstract">Medical images often suffer from low contrast and noise. This thesis proposes a denoising-based enhancement approach using Gaussian noise addition, Wiener filtering for noise removal, and sharpening techniques. The enhanced images showed significant improvement in quality as measured by MSE, PSNR, and SNR metrics.</span>
                         </p>
-                        <a href="mtechThesis.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 20px;">
+                        <a href="mtechThesis.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 20px;" data-i18n="thesis.mtech.download">
                             📄 Download M.Tech Thesis (PDF)
                         </a>
                     </div>
@@ -338,19 +334,16 @@
                 <div class="thesis-card">
                     <div class="thesis-icon">💻</div>
                     <div class="thesis-info">
-                        <h3>B.E. Project Thesis (2020)</h3>
-                        <p class="thesis-title">"Energy Efficiency in Multipath Routing Protocol on Wireless Sensor Network with Static Sink"</p>
+                        <h3 data-i18n="thesis.be.label">B.E. Project Thesis (2020)</h3>
+                        <p class="thesis-title" data-i18n="thesis.be.title">"Energy Efficiency in Multipath Routing Protocol on Wireless Sensor Network with Static Sink"</p>
                         <p class="thesis-meta">
-                            <strong>Supervisor:</strong> Takhellambam Sonamani Singh, Assistant Professor, MIT<br />
-                            <strong>Institution:</strong> Manipur Institute of Technology, Manipur University
+                            <strong data-i18n="thesis.be.supervisorLabel">Supervisor:</strong> <span data-i18n="thesis.be.supervisor">Takhellambam Sonamani Singh, Assistant Professor, MIT</span><br />
+                            <strong data-i18n="thesis.be.institutionLabel">Institution:</strong> <span data-i18n="thesis.be.institution">Manipur Institute of Technology, Manipur University</span>
                         </p>
                         <p class="thesis-abstract">
-                            <strong>Abstract:</strong> Proposed a Hop count-based Shortest Multipath Routing Protocol (HSMRP)
-                            for WSNs with static sink. The protocol discovers multiple shortest paths using hop count,
-                            selecting the shortest as primary and the next shortest as alternate. Simulation results showed
-                            improved residual energy, more live nodes, and higher packet delivery ratio compared to existing protocols.
+                            <strong data-i18n="thesis.be.abstractLabel">Abstract:</strong> <span data-i18n="thesis.be.abstract">Proposed a Hop count-based Shortest Multipath Routing Protocol (HSMRP) for WSNs with static sink. The protocol discovers multiple shortest paths using hop count, selecting the shortest as primary and the next shortest as alternate. Simulation results showed improved residual energy, more live nodes, and higher packet delivery ratio compared to existing protocols.</span>
                         </p>
-                        <a href="THESIS.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 20px;">
+                        <a href="THESIS.pdf" target="_blank" class="btn btn-primary" style="font-size: 0.9rem; padding: 8px 20px;" data-i18n="thesis.be.download">
                             📄 Download B.E. Thesis (PDF)
                         </a>
                     </div>
@@ -363,33 +356,33 @@
     <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" style="background: white;">
         <div class="container">
-            <h2>📬 Get in Touch</h2>
-            <p class="contact-subtitle">Have a question, collaboration idea, or research opportunity? Reach out!</p>
+            <h2 data-i18n="contact.title">📬 Get in Touch</h2>
+            <p class="contact-subtitle" data-i18n="contact.subtitle">Have a question, collaboration idea, or research opportunity? Reach out!</p>
 
             <form id="contact-form" class="contact-form" action="https://formspree.io/f/xjgqvkqo" method="POST">
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name" data-i18n="contact.name">Name</label>
                     <input type="text" id="name" name="name" placeholder="Your Name" required />
                 </div>
                 <div class="form-group">
-                    <label for="email">Email</label>
+                    <label for="email" data-i18n="contact.email">Email</label>
                     <input type="email" id="email" name="email" placeholder="you@example.com" required />
                 </div>
                 <div class="form-group">
-                    <label for="message">Message</label>
+                    <label for="message" data-i18n="contact.message">Message</label>
                     <textarea id="message" name="message" rows="5" placeholder="Your message..." required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Send Message</button>
+                <button type="submit" class="btn btn-primary" data-i18n="contact.sendBtn">Send Message</button>
             </form>
 
             <p id="form-status" class="form-status"></p>
 
             <div style="text-align: center; margin-top: 32px;">
                 <p style="color: #4A4A5E; font-size: 1rem;">
-                    📧 <strong>Email:</strong> <a href="mailto:dingkuoinam210399@gmail.com" style="color: #4A90D9;">dingkuoinam210399@gmail.com</a>
+                    📧 <strong data-i18n="contact.emailLabel">Email:</strong> <a href="mailto:dingkuoinam210399@gmail.com" style="color: #4A90D9;">dingkuoinam210399@gmail.com</a>
                 </p>
                 <p style="margin-top: 8px;">
-                    <a href="https://scholar.google.com/citations?user=8PlPvkoAAAAJ&hl=en" target="_blank" style="color: #4A90D9; font-weight: 600;">🎓 Google Scholar</a>
+                    <a href="https://scholar.google.com/citations?user=8PlPvkoAAAAJ&hl=en" target="_blank" style="color: #4A90D9; font-weight: 600;" data-i18n="contact.googleScholar">🎓 Google Scholar</a>
                 </p>
             </div>
         </div>
@@ -398,13 +391,13 @@
     <!-- ===== FOOTER ===== -->
     <footer>
         <div class="container">
-            <p>&copy; 2026 Dingku Singh Oinam. Hosted on GitHub Pages.</p>
+            <p data-i18n="footer.copyright">&copy; 2026 Dingku Singh Oinam. Hosted on GitHub Pages.</p>
             <div class="footer-links">
                 <a href="https://github.com/Dingku99" target="_blank">GitHub</a>
                 <a href="https://linkedin.com/in/dingku-oinam-a1616a20b" target="_blank">LinkedIn</a>
                 <a href="mailto:dingkuoinam210399@gmail.com">Email</a>
                 <a href="https://scholar.google.com/citations?user=8PlPvkoAAAAJ&hl=en" target="_blank">Google Scholar</a>
-                <a href="#thesis">Thesis</a>
+                <a href="#thesis" data-i18n="footer.thesis">Thesis</a>
             </div>
         </div>
     </footer>
